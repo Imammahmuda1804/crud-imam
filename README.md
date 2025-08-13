@@ -39,7 +39,7 @@ Pastikan perangkat Anda sudah terinstal software berikut:
 Buka terminal atau Git Bash, lalu clone repository ini ke direktori lokal Anda.
 ```bash
 git clone [https://github.com/Imammahmuda1804/crud-imam.git](https://github.com/Imammahmuda1804/crud-imam.git)
-cd your-repository-name
+cd crud-imam
 ```
 
 **b. Instal Dependensi**
