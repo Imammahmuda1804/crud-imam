@@ -2,7 +2,7 @@
 
 Selamat datang di MyLibrary! Ini adalah aplikasi web sederhana yang dibangun dengan Laravel untuk mengelola koleksi buku, penulis, dan kategori di perpustakaan digital Anda.
 
-![Pratinjau Aplikasi](https://drive.google.com/file/d/1dh10CfsfAKUrljb0jCOsOJ5i-xThXtg6/view?usp=sharing)
+![Pratinjau Aplikasi](https://drive.google.com/uc?export=view&id=1dh10CfsfAKUrljb0jCOsOJ5i-xThXtg6)
 
 ---
 ## ✨ Fitur Utama
@@ -38,8 +38,8 @@ Pastikan perangkat Anda sudah terinstal software berikut:
 **a. Clone Repository**
 Buka terminal atau Git Bash, lalu clone repository ini ke direktori lokal Anda.
 ```bash
-git clone [https://github.com/Imammahmuda1804/crud-imam.git](https://github.com/Imammahmuda1804/crud-imam.git)
-cd your-repository-name
+git clone https://github.com/Imammahmuda1804/crud-imam.git
+cd crud-imam
 ```
 
 **b. Instal Dependensi**
