@@ -38,7 +38,7 @@ Pastikan perangkat Anda sudah terinstal software berikut:
 **a. Clone Repository**
 Buka terminal atau Git Bash, lalu clone repository ini ke direktori lokal Anda.
 ```bash
-git clone [https://github.com/Imammahmuda1804/crud-imam.git](https://github.com/Imammahmuda1804/crud-imam.git)
+git clone https://github.com/Imammahmuda1804/crud-imam.git
 cd crud-imam
 ```
 
