@@ -2,14 +2,12 @@
 
 @section('title', 'Your Digital Bookshelf')
 
-{{-- Bagian style ini tidak lagi diperlukan dan bisa dihapus atau dikosongkan --}}
 @section('styles')
 @endsection
 
 @section('content')
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
-    {{-- Header dengan judul dan tombol Add Book --}}
     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-10 gap-4">
         <h1 class="text-4xl font-bold text-gray-800 tracking-tight">Digital Bookshelf</h1>
         <a href="{{ route('books.create') }}" class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-5 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
@@ -18,7 +16,6 @@
         </a>
     </div>
 
-    {{-- Notifikasi 'success' --}}
     @if(session('success'))
         <div id="toast-success" class="fixed top-24 right-5 bg-green-500 text-white py-3 px-6 rounded-lg shadow-xl z-50 flex items-center gap-3">
             <i class="fas fa-check-circle"></i>
@@ -26,7 +23,6 @@
         </div>
     @endif
 
-    {{-- Daftar Buku dengan Layout Masonry --}}
     <div class="masonry-grid">
         @forelse($books as $index => $book)
             <div class="book-item" style="animation-delay: {{ $index * 70 }}ms;">
@@ -64,7 +60,6 @@
     </div>
 </div>
 
-{{-- Modal untuk Detail Buku --}}
 <div id="bookDetailModal" class="modal fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50 p-4">
     <div class="modal-content bg-white rounded-lg shadow-2xl w-full max-w-lg max-h-full overflow-y-auto p-8 relative transform scale-95">
         <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors duration-300">
@@ -90,7 +85,6 @@
     </div>
 </div>
 
-{{-- JavaScript untuk Modal dan Notifikasi --}}
 <script>
     const modal = document.getElementById('bookDetailModal');
     const modalContent = modal.querySelector('.modal-content');

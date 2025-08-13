@@ -11,7 +11,6 @@
             <p class="text-gray-500 mt-2">Update the details for the "{{ $category->name }}" category.</p>
         </div>
 
-        {{-- Menampilkan error validasi --}}
         @if ($errors->any())
             <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6 rounded-lg" role="alert">
                 <p class="font-bold">Oops! Something went wrong.</p>
@@ -40,7 +39,6 @@
 
             </div>
 
-            {{-- Tombol Aksi --}}
             <div class="mt-12 pt-6 border-t border-gray-200 flex justify-end gap-4">
                 <a href="{{ route('categories.index') }}" class="py-2 px-6 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">Cancel</a>
                 <button type="submit" class="py-2 px-6 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all">Update Category</button>

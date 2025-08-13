@@ -17,16 +17,11 @@ class books extends Model
 
     public function author()
     {
-        // Pastikan nama model Author sudah benar (biasanya 'App\Models\Author')
         return $this->belongsTo(authors::class);
     }
 
-    /**
-     * Mendefinisikan relasi "belongsTo" ke model Category.
-     */
     public function category()
     {
-        // Pastikan nama model Category sudah benar (biasanya 'App\Models\Category')
         return $this->belongsTo(categories::class);
     }
 }
