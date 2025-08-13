@@ -2,7 +2,7 @@
 
 Selamat datang di MyLibrary! Ini adalah aplikasi web sederhana yang dibangun dengan Laravel untuk mengelola koleksi buku, penulis, dan kategori di perpustakaan digital Anda.
 
-![Pratinjau Aplikasi](https://drive.google.com/file/d/1dh10CfsfAKUrljb0jCOsOJ5i-xThXtg6/view?usp=sharing)
+![Pratinjau Aplikasi](https://drive.google.com/uc?export=view&id=1dh10CfsfAKUrljb0jCOsOJ5i-xThXtg6)
 
 ---
 ## ✨ Fitur Utama
