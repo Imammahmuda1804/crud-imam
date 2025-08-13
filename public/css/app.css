@@ -1,0 +1,146 @@
+/* === Global Styles & Fonts === */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f7f8fc;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* === Books Index Page Styles === */
+
+/* Layout Grid Masonry */
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.book-item {
+    break-inside: avoid;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Efek 3D pada Sampul Buku */
+.book-cover-wrapper {
+    perspective: 1000px;
+}
+
+.book-cover {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    border-radius: 8px;
+    background-size: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+        box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.book-cover-wrapper:hover .book-cover {
+    transform: scale(1.05) rotateX(10deg) rotateY(-10deg);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Overlay Tombol Aksi */
+.action-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.book-cover-wrapper:hover .action-overlay {
+    opacity: 1;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === Modal Styles === */
+.modal {
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    transition: transform 0.3s ease;
+}
+
+.file-input-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+}
+.file-input-wrapper input[type="file"] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.file-input-placeholder {
+    border-style: dashed;
+    position: relative; /* Diperlukan untuk positioning anak absolut */
+    overflow: hidden; /* Memastikan gambar tidak keluar dari border radius */
+}
+
+.author-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.author-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+        0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+.book-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.book-list.expanded {
+    max-height: 500px; /* Atur tinggi maksimal sesuai kebutuhan */
+}
+.author-photo {
+    width: 100px;
+    height: 100px;
+    border: 4px solid white;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+.author-bio {
+    transition: all 0.3s ease-in-out;
+}
+
+.category-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-left: 4px solid;
+    }
+    .category-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
